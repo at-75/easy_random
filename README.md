@@ -96,8 +96,8 @@ fn  main(){
 }
 ```
 
-#Todo
-- function exclude some characters
+# Todo
+- ~~function exclude some characters~~
 - Add special characters
 - Add support for UNIX characters
 
