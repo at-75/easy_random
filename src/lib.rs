@@ -1,4 +1,3 @@
-
 use rand::Rng;
 use rand::thread_rng;
 pub struct  EasyRandom{
@@ -6,7 +5,6 @@ pub struct  EasyRandom{
     upper_case_alphabets:Vec<char>,
     all_case_alphabets:Vec<char>,
     numbers:Vec<char>,
-    exclude:Vec<char>,
 }
 
 impl EasyRandom{
@@ -16,7 +14,6 @@ impl EasyRandom{
             upper_case_alphabets:('A'..'Z').collect(),
             all_case_alphabets:  (b'a'..=b'z').chain(b'A'..=b'Z').map(|c| c as char).collect(),
             numbers:('0'..'9').collect(),
-            exclude:Vec::new(),
         }
     }
     fn generate_random_index(&mut self, i:usize) -> usize {
@@ -76,18 +73,11 @@ impl EasyRandom{
                 pattern.push(' ');
             }
             else{
-                return String::from("Please use characters a,b,c,n only to generate");
+                pattern= String::from("Please use characters a,b,c,n only to generate");
+                break;
             }
         }
-        println!("Generated : {}",pattern);
         return pattern;
     }
-    // fn include_alphabets(&mut self, chars: &[char]) {
-    //     for &c in chars {
-    //         if !self.alphabet_char.contains(&c) {
-    //             self.alphabet_char.push(c);
-    //         }
-    //     }
-    // }
 }
 
