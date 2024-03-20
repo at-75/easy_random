@@ -71,7 +71,6 @@ bkbaz6700
 uuluz5785
 */
 ```
-  
 
 # Usage
 You can add it from the terminal
@@ -82,7 +81,7 @@ cargo add easy_random
 You can also add this to TOML file
 ```
 [dependencies]
-easy_random = "0.1.3"
+easy_random = "0.2.1"
 ```
     	
 Here is the full sample code
@@ -90,8 +89,8 @@ Here is the full sample code
 use easy_random::EasyRandom;
 
 fn  main(){
-    let  mut  sp_gen  =  EasyRandom::new();
-    let  output=sp_gen.generate(String::from("aa bbb ccc nnnn"));
+    let mut sp_gen = EasyRandom::new();
+    let output = sp_gen.generate(String::from("aa bbb ccc nnnn"));
     println!("{}",output);
     // ks HCP GBq 6751
 }

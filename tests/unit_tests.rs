@@ -5,9 +5,11 @@ mod tests {
 
     #[test]
     fn test_include_alphabets() {
-        let mut str_pattern_generator=EasyRandom::new();
-        str_pattern_generator.exclude_chars(&['a','b','C','D','0','1','2','3']);
-        let generated_string=str_pattern_generator.generate(String::from("abc abc abbccccc nnnn"));
-        println!("{}",generated_string);
+        let mut sp_gen = EasyRandom::new();
+        sp_gen.exclude_chars(&['3','1','4','9','2']); //removing all the vowels from the generator
+        for i in 0..10{
+            let  output=sp_gen.generate(String::from("aaaaannnn")); 
+            println!("{}",output);
+        }
     }
 }
