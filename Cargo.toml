@@ -1,6 +1,6 @@
 [package]
 name = "easy_random"
-version = "0.1.4"
+version = "0.2.0"
 edition = "2021"
 authors = ["https://github.com/at-75"]
 description = "Generate random data easily with easy_random :)."

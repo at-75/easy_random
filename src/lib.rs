@@ -72,6 +72,9 @@ impl EasyRandom{
             else if c.eq(&' '){
                 pattern.push(' ');
             }
+            else if c.eq(&'_'){
+                pattern.push('_');
+            }            
             else{
                 pattern= String::from("Please use the characters a(lowercase),b(uppercase),c(upper+lower cases),n(numbers) only to generate");
                 break;
