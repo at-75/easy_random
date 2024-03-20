@@ -50,7 +50,7 @@ fn  main(){
     let  mut  sp_gen  =  EasyRandom::new();
     let  output=sp_gen.generate(String::from("aa bbb ccc nnnn"));
     println!("{}",output);
-	// ks HCP GBq 6751
+    // ks HCP GBq 6751
 }
 ```
 
