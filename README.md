@@ -81,7 +81,7 @@ cargo add easy_random
 You can also add this to TOML file
 ```
 [dependencies]
-easy_random = "0.2.1"
+easy_random = "0.2.4"
 ```
     	
 Here is the full sample code
@@ -95,5 +95,10 @@ fn  main(){
     // ks HCP GBq 6751
 }
 ```
+
+#Todo
+- function exclude some characters
+- Add special characters
+- Add support for UNIX characters
 
 
