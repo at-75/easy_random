@@ -73,7 +73,7 @@ impl EasyRandom{
                 pattern.push(' ');
             }
             else{
-                pattern= String::from("Please use characters a,b,c,n only to generate");
+                pattern= String::from("Please use the characters a(lowercase),b(uppercase),c(upper+lower cases),n(numbers) only to generate");
                 break;
             }
         }
