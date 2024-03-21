@@ -90,15 +90,29 @@ use easy_random::EasyRandom;
 
 fn  main(){
     let mut sp_gen = EasyRandom::new();
-    let output = sp_gen.generate(String::from("aa bbb ccc nnnn"));
-    println!("{}",output);
-    // ks HCP GBq 6751
+    // _ and ' ' are passed as it is from pattern
+    let output1 = sp_gen.generate(String::from("aa bbb cc__c nnnn"));
+    // ks HCP GB__q 6751
+
+    // You can pass a &[char] to exclude characters like vowels
+    sp_gen.exclude_chars(&['a','e','i','o','u']); 
+    // -----------------------OR-------------------------------
+    //  sp_gen.exclude_chars_from_vec(vec!['a','e','i','o','u']);
+    let output2 = sp_gen.generate(String::from("aaaaabbbb")); 
+    // rynzfVVSG
+
+    // You can use s in the pattern to add you own custom chars
+    sp_gen.add_custom_chars_from_vec(vec!['♠', '♣', '♥', '♦', '←', '↑', '→', '↓', '↔']);
+    // ------------------- OR ---------------------------------
+    // sp_gen.add_custom_chars(&['♠', '♣', '♥', '♦', '←', '↑', '→', '↓', '↔']);
+    
+    let output3 = sp_gen.generate(String::from("aaaa s aaaa"));
+    // wtjw ♠ slxf
 }
 ```
 
 # Todo
 - ~~function exclude some characters~~
-- Add special characters
-- Add support for UNIX characters
+- ~~Add special characters~~
 
 
