@@ -8,8 +8,9 @@ Suppose we want to generate random strings of pattern "aaaa bbbnnn ccccc" where
  -  b   -> upper case english alphabets
  -  c   -> Both upper case and lower case english alphabets
  -  n   -> numbers from 0 to 9
- - ' ' -> space 
- - '_' -> underscore
+ -  s   -> custom characters which you can add
+ - ' '  -> space 
+ - '_'  -> underscore
  
 ```rust
 let mut sp_gen = EasyRandom::new();
@@ -81,7 +82,7 @@ cargo add easy_random
 You can also add this to TOML file
 ```
 [dependencies]
-easy_random = "0.2.4"
+easy_random = "0.2.5"
 ```
     	
 Here is the full sample code
@@ -108,6 +109,10 @@ fn  main(){
     
     let output3 = sp_gen.generate(String::from("aaaa s aaaa"));
     // wtjw ♠ slxf
+
+    // Lets generate a mixed string 
+    let output4 = sp_gen.generate(String::from("aa nss___bc"));
+    // vl 6♣←___YW
 }
 ```
 
